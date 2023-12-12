@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="icon">
+      <img class="logo-icon" src="../images/Logo.png" alt="disney_plus_hotstar_logo">
+    </div>
+    <div class="nav-icons">
+      <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#"> <i class="fa-solid fa-house"></i></a>
+      <a href="#"> <i class="fa-solid fa-tv"></i></a>
+      <a href="#"><i class="fa-solid fa-clapperboard"></i></a>
+      <a href="#"><i class="fa-solid fa-baseball"></i></a>
+    </div>
+  </header>
+
+  <div class="full-size">
+    <div class="head">
+      <h1>Super Hero Specials</h1>
+    </div>
+    <div class="container" id="Super-Hero">
+    </div>
+  </div>
+  <script>
+    let superhero = [
+      {
+        poster: "../images/Marvel/Hero1.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero2.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero3.jpeg"
+      },
+      {
+        poster: "../images/Marvel/Hero4.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero5.jpeg"
+      },
+      {
+        poster: "../images/Marvel/Hero6.jpeg"
+      },
+      {
+        poster: "../images/Marvel/Hero7.jpeg"
+      },
+      {
+        poster: "../images/Marvel/Hero8.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero9.jpeg"
+      },
+      {
+        poster: "../images/Marvel/Hero10.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero11.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero12.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero13.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero14.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero15.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero16.webp "
+      },
+      {
+        poster: "../images/Marvel/Hero17.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero18.jpg"
+      },
+      {
+        poster: "../images/Marvel/Hero19.jpg"
+      }
+    ]
+
+    function movies_display7() {
+      const Movies = document.getElementById('Super-Hero');
+      let MoviesIndex = 0;
+      //create dom elements
+      for (i = 0; i < superhero.length; i++) {
+        let ver_card = document.createElement('div');
+        let ver_poster = document.createElement('div');
+        let poster = document.createElement('img');
+        //Attachd elements
+        poster.appendChild(document.createTextNode(''));
+        ver_card.appendChild(ver_poster);
+        ver_poster.appendChild(poster);
+        Movies.appendChild(ver_card);
+        //setting up img
+        poster.src = superhero[MoviesIndex].poster;
+        MoviesIndex++;
+        //setting class name
+        ver_card.className = "ver-movie-card";
+        ver_poster.className = "vertical-poster";
+        poster.className = "poster";
+      }
+    }
+    movies_display7()
+
+  </script>
+</body>
+
+</html>

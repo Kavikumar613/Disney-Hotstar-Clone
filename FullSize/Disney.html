@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="icon">
+      <img class="logo-icon" src="../images/Logo.png" alt="disney_plus_hotstar_logo">
+    </div>
+    <div class="nav-icons">
+      <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="../main/index.html"> <i class="fa-solid fa-house"></i></a>
+      <a href="#"> <i class="fa-solid fa-tv"></i></a>
+      <a href="#"><i class="fa-solid fa-clapperboard"></i></a>
+      <a href="#"><i class="fa-solid fa-baseball"></i></a>
+    </div>
+  </header>
+
+  <div class="full-size">
+    <div class="head">
+      <h1>Walt Disney Specials</h1>
+    </div>
+    <div class="container" id="Disney">
+
+    </div>
+  </div>
+  <script>
+    let disney = [
+      {
+        poster: "../images/Disney/img1.webp"
+      },
+      {
+        poster: "../images/Disney/img2.jpeg"
+      },
+      {
+        poster: "../images/Disney/img3.jpeg"
+      },
+      {
+        poster: "../images/Disney/img4.jpeg"
+      },
+      {
+        poster: "../images/Disney/img5.jpg"
+      },
+      {
+        poster: "../images/Disney/img6.jpg"
+      },
+      {
+        poster: "../images/Disney/img7.jpg"
+      },
+      {
+        poster: "../images/Disney/img8.jpeg"
+      },
+      {
+        poster: "../images/Disney/img9.jpg"
+      },
+      {
+        poster: "../images/Disney/img10.jpg "
+      },
+      {
+        poster: "../images/Disney/img11.jpeg"
+      },
+      {
+        poster: "../images/Disney/img12.jpg"
+      },
+      {
+        poster: "../images/Disney/img13.jpeg"
+      },
+      {
+        poster: "../images/Disney/img14.jpg"
+      },
+      {
+        poster: "../images/Disney/img15.jpg"
+      },
+      {
+        poster: "../images/Disney/img16.jpeg"
+      },
+      {
+        poster: "../images/Disney/img17.jpg"
+      }
+    ]
+
+    function movies_display8() {
+      const Movies = document.getElementById('Disney');
+  let MoviesIndex = 0;
+  //create dom elements
+  for (i = 0; i < disney.length; i++) {
+    let ver_card = document.createElement('div');
+    let ver_poster = document.createElement('div');
+    let poster = document.createElement('img');
+    //Attachd elements
+    poster.appendChild(document.createTextNode(''));
+    ver_card.appendChild(ver_poster);
+    ver_poster.appendChild(poster);
+    Movies.appendChild(ver_card);
+    //setting up img
+    poster.src = disney[MoviesIndex].poster;
+    MoviesIndex++;
+    //setting class name
+    ver_card.className = "ver-movie-card";
+    ver_poster.className = "vertical-poster";
+    poster.className = "poster";
+  }
+    }
+    movies_display8()
+  </script>
+</body>
+
+</html>

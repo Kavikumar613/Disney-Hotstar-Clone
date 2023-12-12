@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="icon">
+      <img class="logo-icon" src="../images/Logo.png" alt="disney_plus_hotstar_logo">
+    </div>
+    <div class="nav-icons">
+      <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#"> <i class="fa-solid fa-house"></i></a>
+      <a href="#"> <i class="fa-solid fa-tv"></i></a>
+      <a href="#"><i class="fa-solid fa-clapperboard"></i></a>
+      <a href="#"><i class="fa-solid fa-baseball"></i></a>
+    </div>
+  </header>
+
+  <div class="full-size">
+    <div class="head">
+      <h1>Top 10 in Tamil-india</h1>
+    </div>
+    <div class="container" id="Top10-Movies">
+    </div>
+  </div>
+  <script>
+    let top10movies = [
+      {
+        rank: 1,
+        poster: " /images/top 10/chitha.jpg"
+      },
+      {
+        rank: "2",
+        poster: "../images/top 10/Label.png"
+      },
+      {
+        rank: "3",
+        poster: "../images/top 10/BB7.jpg"
+      },
+      {
+        rank: "4",
+        poster: "../images/top 10/KK.webp"
+      },
+      {
+        rank: "5",
+        poster: "../images/top 10/kannur-squad.jpg"
+      },
+      {
+        rank: "6",
+        poster: "../images/top 10/Vikram.webp"
+      },
+      {
+        rank: "7",
+        poster: "../images/top 10/Mathaham.jpeg"
+      },
+      {
+        rank: "8",
+        poster: "../images/top 10/img11.png"
+      },
+      {
+        rank: "9",
+        poster: "../images/top 10/Valatty.jpeg"
+      },
+      {
+        rank: "10",
+        poster: "../images/top 10/img6.jpg"
+      }
+
+    ]
+
+    function movies_display() {
+      let moviecodes = ` `;
+      for (i = 0; i < top10movies.length; i++) {
+        moviecodes = moviecodes + `
+  <div class="ver-movie-card">
+    <div class="vertical-poster">
+      <img class="poster" src="${top10movies[i].poster}" alt="">
+    </div>
+  </div>
+  `
+        document.getElementById('Top10-Movies').innerHTML = moviecodes;
+      }
+    }
+    movies_display()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="icon">
+      <img class="logo-icon" src="../images/Logo.png" alt="disney_plus_hotstar_logo">
+    </div>
+    <div class="nav-icons">
+      <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#"> <i class="fa-solid fa-house"></i></a>
+      <a href="#"> <i class="fa-solid fa-tv"></i></a>
+      <a href="#"><i class="fa-solid fa-clapperboard"></i></a>
+      <a href="#"><i class="fa-solid fa-baseball"></i></a>
+    </div>
+  </header>
+  <div class="full-size">
+    <div class="head">
+      <h1>It's Koffee Time</h1>
+    </div>
+    <div class="container" id="Its-Coffe-Time">
+
+    </div>
+  </div>
+  <script>
+    let coffetime = [
+      {
+        poster: "../images/Caffee time/koffe1.jpeg",
+        members: "Kajol and Rani Mukerji"
+      },
+      {
+        poster: "../images/Caffee time/koffe2.jpeg",
+        members: "Sidharth Malhotra and Varun Dhawan"
+      },
+      {
+        poster: "../images/Caffee time/koffe3.jpeg",
+        members: "Kareena Kapoor Khan and Alia Bhatt"
+      },
+      {
+        poster: "../images/Caffee time/koffe4.jpeg",
+        members: "Sara Ali Khan and Ananya Pandey"
+      },
+      {
+        poster: "../images/Caffee time/koffe5.jpeg",
+        members: "Sunny Deol and Bobby Deol"
+      },
+      {
+        poster: "../images/Caffee time/koffe6.png",
+        members: "Deepika Padukone and Ranveer Singh"
+      },
+      {
+        poster: "../images/Caffee time/koffe7.webp",
+        members: "Saif Ali Khan and Sara Ali Khan"
+      },
+      {
+        poster: "../images/Caffee time/koffe8.jpg",
+        members: "Akhay Kumar and Ranveer Singh"
+      },
+      {
+        poster: "../images/Caffee time/koffe9.webp",
+        members: "Deepika Padukone and Alia Bhatt"
+      },
+      {
+        poster: "../images/Caffee time/koffe10.jpeg",
+        members: "Ranbir Kapoor, Ranveer Sign"
+      },
+      {
+        poster: "../images/Caffee time/koffe11.png",
+        members: "AliaBhatt and ShahRukh Khan"
+      },
+      {
+        poster: "../images/Caffee time/koffe12.jpeg",
+        members: "Salman Khan"
+      },
+      {
+        poster: "../images/Caffee time/koffe13.jpg",
+        members: "Kajol and ShahRukh Khan"
+      }
+    ]
+
+    function movies_display6() {
+      let moviecodes = ` `;
+      for (i = 0; i < coffetime.length; i++) {
+        moviecodes = moviecodes + `
+    <div class="hor-movie-card">
+      <div class="overlay1">
+        <p><button>free</button></p>
+        <i class="fa-solid fa-play"></i>
+      </div>
+      <div class="horizontal-poster">
+        <img class="poster1" src="${coffetime[i].poster}" alt="">
+       </div>
+      <div class="highlights">
+       <p>${coffetime[i].members}</p>
+      </div>
+    </div>
+  `
+        document.getElementById('Its-Coffe-Time').innerHTML = moviecodes;
+      }
+    }
+    movies_display6()
+
+  </script>
+</body>
+
+</html>

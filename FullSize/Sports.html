@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="icon">
+      <img class="logo-icon" src="../images/Logo.png" alt="disney_plus_hotstar_logo">
+    </div>
+    <div class="nav-icons">
+      <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#"> <i class="fa-solid fa-house"></i></a>
+      <a href="#"> <i class="fa-solid fa-tv"></i></a>
+      <a href="#"><i class="fa-solid fa-clapperboard"></i></a>
+      <a href="#"><i class="fa-solid fa-baseball"></i></a>
+    </div>
+  </header>
+
+  <div class="full-size">
+    <div class="head">
+      <h1>Best of Sports</h1>
+    </div>
+    <div class="container" id="Sports">
+    </div>
+  </div>
+
+  <script>
+    let sports = [
+      {
+        poster: "../images/Sports/Sports1.jpeg",
+        highlight: "Rahul Dravid Stay on as India Coach"
+      },
+      {
+        poster: "../images/Sports/Jaipur-Pink-Panthers.jpg",
+        highlight: "Jaipur Pink Panthers All you need Know"
+      },
+      {
+        poster: "../images/Sports/Jaiswal.jpeg",
+        highlight: "Jaiwals inspiring journey"
+      },
+      {
+        poster: "../images/Sports/Sports12.jpeg",
+        highlight: "Team of GW 13ft. Haverts"
+      },
+      {
+        poster: "../images/Sports/Sports6.jpeg",
+        highlight: "Mongie Decodes Pandya's Move to..."
+      },
+      {
+        poster: "../images/Sports/Sunrisers-Hyderabad.jpg",
+        highlight: "Giants Clip Urbanrisers's Wings"
+      },
+      {
+        poster: "../images/Sports/Sports3.webp",
+        highlight: "Maxwell: King of Chases in Troll"
+      },
+      {
+        poster: "../images/Sports/Sports4.jpeg",
+        highlight: "Hit & Flop: NewCastle vs Chelsea"
+      },
+      {
+        poster: "../images/Sports/Sports5.jpeg",
+        highlight: "Moments of GW Btt Haaland"
+      },
+      {
+        poster: "../images/Sports/sports7.jpeg",
+        highlight: "Rooney - Sepue: Garnacho nets a.."
+      },
+      {
+        poster: "../images/Sports/Sports8.jpeg",
+        highlight: "Team of ICC Men's CWC 2023 Ft Rohit"
+      },
+      {
+        poster: "../images/Sports/Sports9.jpeg",
+        highlight: "Everton 0-3 Manchester United"
+      },
+      {
+        poster: "../images/Sports/Sports10.jpeg",
+        highlight: "Tott When 1-2 Aston Villa"
+      },
+      {
+        poster: "../images/Sports/Sports11.jpeg",
+        highlight: "Hist & Flop: Mancity vs Liverpool"
+      },
+      {
+        poster: "../images/Sports/Sports2.jpg",
+        highlight: "Highlights od CSK vs RCB"
+      },
+      {
+        poster: "../images/Sports/yashasvi.jpg",
+        highlight: "Jawals Blazes At the Top 50"
+      }
+    ]
+
+    function movies_display2() {
+      let moviecodes = ` `;
+      for (i = 0; i < sports.length; i++) {
+        moviecodes = moviecodes + `
+  <div class="hor-movie-card">
+    <div class="overlay1">
+        <p></p>
+      <i class="fa-solid fa-play"></i>
+    </div>
+    <div class="horizontal-poster">
+     <img class="poster1" src="${sports[i].poster}" alt="">
+    </div>
+    <div class="highlights">
+      <p>${sports[i].highlight}</p>
+    </div>
+  </div>
+  `
+        document.getElementById('Sports').innerHTML = moviecodes;
+      }
+    }
+    movies_display2()
+
+  </script>
+</body>
+
+</html>

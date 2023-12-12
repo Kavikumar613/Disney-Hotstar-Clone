@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="icon">
+      <img class="logo-icon" src="../images/Logo.png" alt="disney_plus_hotstar_logo">
+    </div>
+    <div class="nav-icons">
+      <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#"> <i class="fa-solid fa-house"></i></a>
+      <a href="#"> <i class="fa-solid fa-tv"></i></a>
+      <a href="#"><i class="fa-solid fa-clapperboard"></i></a>
+      <a href="#"><i class="fa-solid fa-baseball"></i></a>
+    </div>
+  </header>
+
+  <div class="full-size">
+    <div class="head">
+      <h1>Hosta Special</h1>
+    </div>
+    <div class="container" id="Hotstar-Special">
+
+    </div>
+  </div>
+  <script>
+    let hotstarspecial = [
+      {
+        poster: "../images/Hostar-special/HP-1.png"
+      },
+      {
+        poster: "../images/Hostar-special/HP-2.png"
+      },
+      {
+        poster: "../images/Hostar-special/HP-3.png"
+      },
+      {
+        poster: "../images/Hostar-special/HP-4.jpg"
+      },
+      {
+        poster: "../images/Hostar-special/HP-5.jpg"
+      },
+      {
+        poster: "../images/Hostar-special/HP-6.png"
+      },
+      {
+        poster: "../images/Hostar-special/HP-7.jpeg"
+      },
+      {
+        poster: "../images/Hostar-special/HP-8.png"
+      },
+      {
+        poster: "../images/Hostar-special/HP-9.png"
+      },
+      {
+        poster: "../images/Hostar-special/HP-10.jpg"
+      },
+      {
+        poster: "../images/Hostar-special/HP-11.jpg"
+      },
+      {
+        poster: "../images/Hostar-special/HP-12.jpeg"
+      },
+      {
+        poster: "../images/Hostar-special/HP-13.jpeg"
+      },
+      {
+        poster: "../images/Hostar-special/HP-14.jpeg"
+      },
+      {
+        poster: "../images/Hostar-special/HP-15.webp"
+      },
+      {
+        poster: "../images/Hostar-special/HP-16.jpg"
+      },
+      {
+        poster: "../images/Hostar-special/HP-17.jpg"
+      },
+      {
+        poster: "../images/Hostar-special/HP-18.webp"
+      }
+    ]
+
+    function movies_display4() {
+      const Movies = document.getElementById('Hotstar-Special');
+      let MoviesIndex = 0;
+      //create dom elements
+      for (i = 0; i < hotstarspecial.length; i++) {
+        let ver_card = document.createElement('div');
+        let ver_poster = document.createElement('div');
+        let poster = document.createElement('img');
+        //Attachd elements
+        poster.appendChild(document.createTextNode(''));
+        ver_card.appendChild(ver_poster);
+        ver_poster.appendChild(poster);
+        Movies.appendChild(ver_card);
+        //setting up img
+        poster.src = hotstarspecial[MoviesIndex].poster;
+        MoviesIndex++;
+        //setting class name
+        ver_card.className = "ver-movie-card";
+        ver_poster.className = "vertical-poster";
+        poster.className = "poster";
+      }
+    }
+    movies_display4();
+  </script>
+</body>
+
+</html>
